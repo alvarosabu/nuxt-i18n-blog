@@ -5,6 +5,8 @@
 
 Boilerplate for multilanguage Nuxt Blog using @nxut/content + nuxt-i18n
 
+Demo [here](https://nuxt-i18n-blog.netlify.app/)
+
 ## Build Setup
 
 ```bash
