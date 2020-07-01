@@ -34,4 +34,10 @@ html {
 .btn-teal:hover {
   @apply bg-teal-700;
 }
+.btn-indigo {
+  @apply bg-indigo-500 text-white;
+}
+.btn-indigo:hover {
+  @apply bg-indigo-700;
+}
 </style>

@@ -1,4 +1,5 @@
 {
   "read-more": "En Savoir Plus",
-  "published-at": "Publié à:"
+  "published-at": "Publié à:",
+  "blog-description": "Boilerplate pour le blog multilingue utilisant @nuxt/content + nuxt-i18n"
 }
