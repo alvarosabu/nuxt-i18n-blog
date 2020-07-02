@@ -5,8 +5,19 @@
         <img :src="post.media" alt="post.title" />
         <div class="">
           <h2 class="text-lg font-bold text-gray-800 mb-2">{{ post.title }}</h2>
-          <p class="text-sm text-gray-700">
+          <p class="text-sm text-gray-700 mb-2">
             {{ $t('published-at') }} {{ getDate }}
+          </p>
+          <p class="text-sm text-gray-700">
+            {{ $t('also-available-in') }}
+            <nuxt-link
+              class="uppercase text-teal-600 hover:text-teal-800"
+              v-for="lang in otherLanguages"
+              :key="lang.locale"
+              :to="lang.path"
+            >
+              {{ lang.locale }}
+            </nuxt-link>
           </p>
         </div>
       </header>
@@ -47,6 +58,9 @@ const head = function () {
 const computed = {
   getDate() {
     return format(new Date(this.post.createdAt), 'dd/MM')
+  },
+  otherLanguages() {
+    return this.post.otherLanguages || []
   },
 }
 
